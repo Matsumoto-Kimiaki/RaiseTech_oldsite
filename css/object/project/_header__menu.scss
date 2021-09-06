@@ -1,7 +1,51 @@
+.p-nav {
+  height: 70px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27.2px;
+}
+
 .p-menu {
+  height: 70px;
   display: flex;
-  justify-content: flex-end;
-  li {
-    list-style-type: none;
+  position: relative;
+}
+
+.menu-item {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;  // 自動的に折り返さない
+  & > a {
+    padding: 0 15px;
+    display: flex;
+  }
+  &:hover {
+    background-color: #d4f1f8;
+  }
+  &.nav__special {
+    background-color: rgb(36, 152, 179);
+  }
+  &.nav__special a {
+    color: #fff;
+  }
+  ul {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    top: 100%;
+  }
+  &:hover ul {
+    display: block;
+  }
+  li a {
+    padding: 15px 60px 15px 15px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    font-weight: 400;
+  }
+  & ul:hover li a {
+    color: red;
   }
 }
+
