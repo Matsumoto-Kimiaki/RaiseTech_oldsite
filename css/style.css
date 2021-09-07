@@ -327,7 +327,7 @@ progress {
 
 body {
   font-family: "Noto Sans JP", sans-serif;
-  font: #131d34;
+  color: #131d34;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -338,7 +338,6 @@ li {
 
 a {
   text-decoration: none;
-  font: #131d34;
 }
 
 a,
@@ -407,65 +406,66 @@ a:active {
 }
 
 .p-menu {
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-.menu-item {
-  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu-item {
+  position: relative;
   white-space: nowrap;
 }
 
 .menu-item > a {
   padding: 0 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+  line-height: 70px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .menu-item:hover {
   background-color: #d4f1f8;
+  cursor: pointer;
+}
+
+.menu-item:hover .close {
+  display: block;
 }
 
 .menu-item.nav__special {
-  background-color: #2498b3;
+  background-color: #2498B3;
 }
 
 .menu-item.nav__special a {
   color: #fff;
 }
 
-.menu-item ul {
-  display: none;
+.menu-item .sub-menu {
   z-index: 1000;
   position: absolute;
   top: 100%;
-}
-
-.menu-item:hover ul {
-  display: block;
+  background-color: #e9f8fb;
 }
 
 .menu-item li a {
   padding: 15px 60px 15px 15px;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-weight: 400;
 }
 
-.menu-item ul:hover li a {
-  color: red;
+.menu-item li a:hover {
+  color: #2498b3;
+  background-color: #FFFFFF;
+}
+
+.close {
+  display: none;
 }
 
 /* Utility ------------ */
