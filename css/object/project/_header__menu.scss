@@ -1,56 +1,101 @@
-.p-nav {
-  height: 70px;
+// ドロワーメニュー（スマホ・タブレット用）
+.p-Nav__body {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
   font-weight: 700;
   font-size: 16px;
-  line-height: 27.2px;
+  line-height: 27px;
+  z-index: 1000;
+  background-color: #fff;
+  a:hover {
+    background-color: #f3fafb;
+  }
 }
 
 .p-menu {
-  display: flex;  //子要素（.menu-item）を横並びにする
-  align-items: center;  //垂直方向を中央揃え
+  flex-direction: column;
 }
 
 .menu-item {
-  position: relative;  //子要素のサブメニューの基準を指定
-  white-space: nowrap;  // 自動的に折り返さない
+  white-space: nowrap;
   & > a {
-    padding: 0 15px;
-    display: block;  //aタグをblock要素に変える
-    line-height: 70px;  //行間を高さと同じ値にして、垂直方向を中央寄せにする
-    transition: .3s;  //メニューをhover時の遅れを指定
-  }
-  &:hover {
-    background-color: #d4f1f8;  //メニューをhover時の背景色を指定
-    cursor:pointer;
-    .close {
-      display: block;
-    }
+    display: block;
+    height: auto;
+    padding: 10px;
+    font-weight: bold;
   }
   &.nav__special {
-    background-color: #2498B3;  //"受講お申し込み"の背景色を指定
+    display: none;
   }
-  &.nav__special a {  //"受講お申し込み"の文字色を指定
-    color: #fff;
-  }
-  
-  //アコーディオン
-  .sub-menu {
-    z-index: 1000;
-    position: absolute;  //親要素のメニューを基準に、上から100%の位置を指定
-    top: 100%;
-    background-color: #e9f8fb;  //サブメニューの背景を指定
-  }
-  li a {
-    padding: 15px 60px 15px 15px;
-    display: flex;
-    font-weight: 400;
-  }
-  li a:hover {
-    color: #2498b3;  //メニューをhover時のサブメニューの文字色を指定
-    background-color: #FFFFFF;  //メニューをhover時のサブメニューの背景色を指定
-    }
-  }
+}
 
-.close {
+.sub-menu {
   display: none;
 }
+
+.sub-menu a {
+  padding: 10px 10px 10px 25px;
+  font-weight: normal;
+  display: block;
+}
+
+// // ドロワーメニュー（パソコン用）
+// .p-Nav__body {
+//   display: none; //ハンバーガーメニュー実装用にとりあえず非表示
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 27px;
+// }
+
+// .p-menu {
+//   display: flex; //子要素（.menu-item）を横並びにする
+//   align-items: center; //垂直方向を中央揃え
+// }
+
+// .menu-item {
+//   position: relative; //子要素のサブメニューの基準を指定
+//   white-space: nowrap; // 自動的に折り返さない
+//   & > a {
+//     padding: 0 15px;
+//     display: block; //aタグをblock要素に変える
+//     line-height: 70px; //行間を高さと同じ値にして、垂直方向を中央寄せにする
+//     transition: 0.3s; //メニューをhover時の遅れを指定
+//   }
+//   &:hover {
+//     background-color: #d4f1f8; //メニューをhover時の背景色を指定
+//     cursor: pointer;
+//     .close {
+//       display: block;
+//     }
+//   }
+//   &.nav__special {
+//     background-color: #2498b3; //"受講お申し込み"の背景色を指定
+//   }
+//   &.nav__special a {
+//     //"受講お申し込み"の文字色を指定
+//     color: #fff;
+//   }
+
+//   //アコーディオン
+//   .sub-menu {
+//     z-index: 1000;
+//     position: absolute; //親要素のメニューを基準に、上から100%の位置を指定
+//     top: 100%;
+//     background-color: #e9f8fb; //サブメニューの背景を指定
+//   }
+//   li a {
+//     padding: 15px 60px 15px 15px;
+//     display: flex;
+//     font-weight: 400;
+//   }
+//   li a:hover {
+//     color: #2498b3; //メニューをhover時のサブメニューの文字色を指定
+//     background-color: #ffffff; //メニューをhover時のサブメニューの背景色を指定
+//   }
+// }
+
+// .close {
+//   display: none;
+// }

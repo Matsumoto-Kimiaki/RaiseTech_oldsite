@@ -1,13 +1,16 @@
+$(function () {
+  
+  // ハンバーガーメニューの実装
+  $("#hamburger_button").click(function () {
+    $(this).toggleClass("active");
+    $(".p-Nav__body").slideToggle(200);
+  });
 
-
-
-$(function(){
-
-// //サブメニューの実装
-$('.menu-item').hover(function(){
-    $(this).children('.sub-menu').slideToggle();  
-    // $(this).toggleClass('sub-open');
-
-
-
+  // アコーディオンメニューの実装
+  $(".has-sub").hover(function () {
+    $(this).children(".sub-menu").stop().slideToggle(300);
+    $(this).toggleClass("open");
+    $(".has-sub").not(this).removeClass("open");
+    $(".has-sub").not($(this)).next(".sub-menu").slideUp();
+  });
 });

@@ -22,9 +22,21 @@
       </div>
 
       <!-- ナビ（ヘッダー右） -->
-      <nav class="p-nav">
+
+      <!-- ドロワーメニュー（スマホ・タブレット用） -->
+      <div class="Nav">
+        <p class="Nav__btn">
+          <button type="button" id="hamburger_button" class="c-btn p-hamburger">
+            <span class="p-hamburger__bar"></span>
+          </button>
+        </p>
+      </div>
+
+      <!-- ドロワーメニュー（パソコン用） -->
+      <nav class="p-Nav__body">
         <ul class="p-menu">
-          <li class="menu-item">
+
+          <li class="menu-item has-sub">
             <a href="#">はじめての方へ</a>
             <ul class="sub-menu close">
               <li><a href="#">マンガでわかるRaiseTech</a></li>
@@ -35,7 +47,7 @@
             </ul>
           </li>
 
-          <li class="menu-item">
+          <li class="menu-item has-sub">
             <a href="#">コース案内</a>
             <ul class="sub-menu close">
               <li><a href="#">マーケティングコース</a></li>
@@ -47,10 +59,10 @@
               <li><a href="#">Javaフレームワークコース</a></li>
             </ul>
           </li>
-          
+
           <li class="menu-item"><a href="#">講師紹介</a></li>
 
-          <li class="menu-item">
+          <li class="menu-item has-sub">
             <a href="#">卒業生の声・実績</a>
             <ul class="sub-menu close">
               <li><a href="#">卒業生の声</a></li>
@@ -58,7 +70,7 @@
             </ul>
           </li>
 
-          <li class="menu-item">
+          <li class="menu-item has-sub">
             <a href="#">メディア</a>
             <ul class="sub-menu close">
               <li><a href="#">動画一覧</a></li>
@@ -66,7 +78,7 @@
             </ul>
           </li>
 
-          <li class="menu-item">
+          <li class="menu-item has-sub">
             <a href="#">サポート</a>
             <ul class="sub-menu close">
               <li><a href="#">よくあるご質問</a></li>
@@ -74,7 +86,7 @@
             </ul>
           </li>
 
-          <li class="nav__special menu-item"><a href="#">受講お申し込み</a></li>
+          <li class="nav__special menu-item has-sub"><a href="#">受講お申し込み</a></li>
         </ul>
       </nav>
     </header>
@@ -128,7 +140,6 @@
               <p>「期間中の質疑応答無制限！個別進捗管理！挫折させないサポートを徹底します。</p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
