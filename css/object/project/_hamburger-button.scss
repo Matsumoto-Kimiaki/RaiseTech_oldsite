@@ -2,6 +2,10 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 27px;
+  @include mq(pc1) {
+display: none;
+  }
+
 
   .p-hamburger {
     width: 50px;
