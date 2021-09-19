@@ -1,0 +1,14 @@
+//レスポンシブ用
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//ハンバーガーボタンのbar
+@mixin bar {
+  display: block;
+  width: 23px;
+  height: 2px;
+  background-color: #2498b3;
+}

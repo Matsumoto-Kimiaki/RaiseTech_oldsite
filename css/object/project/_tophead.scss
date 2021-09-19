@@ -6,7 +6,16 @@
   background-position: center -25px; //背景画像の位置を中央に指定
   background-size: cover;  //縦横比を保持したまま、拡大表示
   background-attachment: fixed; //背景画像の位置を固定
-
+  
+  // .tophead {
+  //   position: relative;
+  //   height: 650px;
+  //   overflow: hidden;  //はみ出た部分を非表示
+  //   background-image: url(../images/bg-hero3.png);
+  //   background-position: center;  //背景画像の位置を中央に指定
+  //   background-size: cover;  //縦横比を保持したまま、拡大表示
+  //   background-attachment: fixed;  //背景画像の位置を固定
+  
   &__layer {
     position: absolute; //topheadの左上に位置指定
     top: 0;
@@ -130,14 +139,6 @@
   }
 }
 
-// .tophead {
-//   position: relative;
-//   height: 650px;
-//   overflow: hidden;  //はみ出た部分を非表示
-//   background-image: url(../images/bg-hero3.png);
-//   background-position: center;  //背景画像の位置を中央に指定
-//   background-size: cover;  //縦横比を保持したまま、拡大表示
-//   background-attachment: fixed;  //背景画像の位置を固定
 
 //   &__layer {
 //     position: absolute;//topheadの左上に位置指定

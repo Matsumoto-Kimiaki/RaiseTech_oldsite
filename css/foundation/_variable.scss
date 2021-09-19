@@ -1,0 +1,13 @@
+//レスポンシブ用
+$breakpoints: (
+  //スマホ用
+  "sp": "(max-width: 767px)",
+  //スマホ用
+  "tab1": "(min-width: 768px)",
+  //タブレット用
+  "tab2": "(min-width: 1079px)",
+  //タブレット用
+  "pc1": "(min-width: 1201px)",
+  //PC用
+  "pc2": "(min-width: 1281px)"
+);

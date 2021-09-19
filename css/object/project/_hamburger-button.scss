@@ -10,13 +10,6 @@
   }
 }
 
-@mixin bar {
-  display: block;
-  width: 23px;
-  height: 2px;
-  background-color: #2498b3;
-}
-
 //３本線が並んでいる状態
 .p-hamburger__bar {
   @include bar;
