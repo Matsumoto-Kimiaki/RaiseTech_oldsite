@@ -24,8 +24,11 @@
     background-color: #121212;
   }
   &.open::after {
-    // top: 25%;
+    top: 25%;
     opacity: 0;
-    // transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  @include mq(pc1) {
+    display: none;
   }
 }
