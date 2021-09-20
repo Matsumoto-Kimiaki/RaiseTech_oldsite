@@ -1,7 +1,7 @@
 .has-sub {
   position: relative;
   &::before {
-    display: block;
+    display: inline-block;
     content: "";
     position: absolute;
     top: 23px;
@@ -13,7 +13,7 @@
     z-index: 9;
   }
   &::after {
-    display: block;
+    display: inline-block;
     content: "";
     position: absolute;
     top: 23px;
