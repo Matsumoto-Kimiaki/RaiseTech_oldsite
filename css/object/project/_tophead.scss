@@ -1,6 +1,6 @@
 .tophead {
   position: relative;
-  height: 350px;
+  height: 320px;
   overflow: hidden; //はみ出た部分を非表示
   background-image: url(../images/bg-hero3.png);
   background-position: center -25px; //背景画像の位置を中央に指定
@@ -30,14 +30,13 @@
     @include mq(tab1) {
       background-position: center;
       align-items: flex-start; //子要素のbodyを垂直方向に上揃え
+      background-size: auto;
     }
   }
 
   &__body {
     width: 100%;
     max-width: 100%;
-    border-radius: 0;
-    margin-top: 300 px;
     padding: 9px 0 13px;
     text-align: center; //テキストを中央に配置
     background-color: #fff;
@@ -88,12 +87,13 @@
     z-index: 100; //背景画像を中間の層に指定
     @include mq(tab1) {
       background-position: center;
+      background-size: auto;
     }
   }
 }
 .bg-black {
   width: 100%;
-  height: 1500px; //実際は226pxだが、視差効果が分かるように伸ばしています
+  height: 1500px; //視差効果が分かるように伸ばしています
   padding: 64px 0;
   background-color: #000;
   @include mq(tab1) {
@@ -102,19 +102,22 @@
     position: relative;
     z-index: 500; //背景画像より手前に指定
   }
-}
-.recommendation {
+  @include mq(tab2) {
+  }
+  .recommendation {
   margin-top: 0;
+  padding: 0 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column;  //子要素を上から下ヘ配置
+  align-items: center;  //子要素を垂直方向に中央揃え
   color: #fff;
   @include mq(tab1) {
     position: absolute; //背景部分にアイコン部分がかかるように位置を指定
     top: -203px;
     display: flex;
     flex-direction: row;
-    justify-content: center; //子要素のrecommendation__entryを水平方向に中央揃え
+    justify-content: center;  //子要素のrecommendation__entryを水平方向に中央揃え
+    align-items: stretch;  //親要素の高さ、または一番多い子要素の高さに合わせて広げて配置
     z-index: 1000;
     max-width: 1078px;
   }
@@ -122,6 +125,10 @@
     margin-bottom: 40px;
     width: auto;
     @include mq(tab1) {
+      margin: 0 2%;
+      width: 29.33%;
+    }
+    @include mq(tab2) {
       margin: 0 50px;
       width: 229px;
     }
@@ -173,4 +180,5 @@
     font-size: 16px;
     margin-top: 8px;
   }
+}
 }
