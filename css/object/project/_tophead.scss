@@ -105,80 +105,80 @@
   @include mq(tab2) {
   }
   .recommendation {
-  margin-top: 0;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;  //子要素を上から下ヘ配置
-  align-items: center;  //子要素を垂直方向に中央揃え
-  color: #fff;
-  @include mq(tab1) {
-    position: absolute; //背景部分にアイコン部分がかかるように位置を指定
-    top: -203px;
+    margin-top: 0;
+    padding: 0 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;  //子要素のrecommendation__entryを水平方向に中央揃え
-    align-items: stretch;  //親要素の高さ、または一番多い子要素の高さに合わせて広げて配置
-    z-index: 1000;
-    max-width: 1078px;
-  }
-  &__entry {
-    margin-bottom: 40px;
-    width: auto;
+    flex-direction: column; //子要素を上から下ヘ配置
+    align-items: center; //子要素を垂直方向に中央揃え
+    color: #fff;
     @include mq(tab1) {
-      margin: 0 2%;
-      width: 29.33%;
+      position: absolute; //背景部分にアイコン部分がかかるように位置を指定
+      top: -203px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; //子要素のrecommendation__entryを水平方向に中央揃え
+      align-items: stretch; //親要素の高さ、または一番多い子要素の高さに合わせて広げて配置
+      z-index: 1000;
+      max-width: 1078px;
     }
-    @include mq(tab2) {
-      margin: 0 50px;
-      width: 229px;
+    &__entry {
+      margin-bottom: 40px;
+      width: auto;
+      @include mq(tab1) {
+        margin: 0 2%;
+        width: 29.33%;
+      }
+      @include mq(tab2) {
+        margin: 0 50px;
+        width: 229px;
+      }
     }
-  }
-  &__title {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    & > p {
-      margin: 0.2em 0 0;
-      font-weight: 700;
-      font-size: 24px;
-    }
-  }
-  &__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 230px;
-    height: 230px;
-    margin: 0 auto;
-    border: solid 6px #000;
-    border-radius: 50%; //50%に指定して円
-    background-color: #fff;
-    .fas {
-      font-family: "Font Awesome 5 Free"; //フォントにFont Awesome 5 Freeを指定
-      font-weight: 900;
-      color: #000;
-      font-size: 100px;
-    }
-    .fa-dumbbell {
-      content: "\f44b"; //アイコン固有のコード
-    }
-    .fa-chart-line {
-      content: "\f201";
-    }
-    .fa-life-ring {
-      content: "\f1cd";
-    }
-    .fa-fw {
+    &__title {
       text-align: center;
-      width: 1.25em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & > p {
+        margin: 0.2em 0 0;
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 230px;
+      height: 230px;
+      margin: 0 auto;
+      border: solid 6px #000;
+      border-radius: 50%; //50%に指定して円
+      background-color: #fff;
+      .fas {
+        font-family: "Font Awesome 5 Free"; //フォントにFont Awesome 5 Freeを指定
+        font-weight: 900;
+        color: #000;
+        font-size: 100px;
+      }
+      .fa-dumbbell {
+        content: "\f44b"; //アイコン固有のコード
+      }
+      .fa-chart-line {
+        content: "\f201";
+      }
+      .fa-life-ring {
+        content: "\f1cd";
+      }
+      .fa-fw {
+        text-align: center;
+        width: 1.25em;
+      }
+    }
+    &__body p {
+      font-weight: 700;
+      font-size: 16px;
+      margin-top: 8px;
     }
   }
-  &__body p {
-    font-weight: 700;
-    font-size: 16px;
-    margin-top: 8px;
-  }
-}
 }
