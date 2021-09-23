@@ -496,7 +496,6 @@ a:active {
   height: 2px;
   margin-top: -1px;
   background-color: #121212;
-  z-index: 9;
 }
 
 .has-sub::after {
