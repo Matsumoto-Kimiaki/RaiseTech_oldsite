@@ -622,7 +622,6 @@ a:active {
 
 @media (min-width: 1201px) {
   .sub-menu {
-    z-index: 1000;
     position: absolute;
     top: 100%;
     background-color: #e9f8fb;
