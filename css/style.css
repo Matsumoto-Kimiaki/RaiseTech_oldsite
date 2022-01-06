@@ -537,7 +537,7 @@ a:active {
 
 @media (min-width: 1201px) {
   .p-Nav__body {
-    display: block;
+    display: block !important;
     position: static;
   }
 }
